@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0219.0753                               -->
+<workbook original-version='18.1' source-build='2020.1.0 (20201.20.0219.0753)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <CascadingFilters />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='COVID-19_Germany_Barchart' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='covid-19_germany' inline='true' name='federated.0xfuclu0ke0z4o16bll9d178jnrp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covid-19_germany_timeline' name='textscan.1hbfysd0odativ1aldgj11hkzdbr'>
+            <connection class='textscan' directory='C:/Users/Marc/PycharmProjects/COVID-19/Data' filename='covid-19_germany_timeline.csv' password='' port='0' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1hbfysd0odativ1aldgj11hkzdbr' name='covid-19_germany_timeline.csv' table='[covid-19_germany_timeline#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='de_DE' separator=';'>
+            <column datatype='integer' name='IdBundesland' ordinal='0' />
+            <column datatype='string' name='Bundesland' ordinal='1' />
+            <column datatype='string' name='Landkreis' ordinal='2' />
+            <column datatype='string' name='Altersgruppe' ordinal='3' />
+            <column datatype='string' name='Geschlecht' ordinal='4' />
+            <column datatype='integer' name='AnzahlFall' ordinal='5' />
+            <column datatype='integer' name='AnzahlTodesfall' ordinal='6' />
+            <column datatype='integer' name='ObjectId' ordinal='7' />
+            <column datatype='date' date-parse-format='yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;' name='Meldedatum' ordinal='8' />
+            <column datatype='integer' name='IdLandkreis' ordinal='9' />
+            <column datatype='datetime' name='Datenstand' ordinal='10' />
+            <column datatype='integer' name='NeuerFall' ordinal='11' />
+            <column datatype='integer' name='NeuerTodesfall' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IdBundesland</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IdBundesland]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>IdBundesland</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bundesland</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Bundesland]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Bundesland</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Landkreis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Landkreis]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Landkreis</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Altersgruppe</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Altersgruppe]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Altersgruppe</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geschlecht</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Geschlecht]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Geschlecht</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AnzahlFall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AnzahlFall]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>AnzahlFall</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AnzahlTodesfall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AnzahlTodesfall]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>AnzahlTodesfall</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ObjectId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ObjectId]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>ObjectId</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Meldedatum</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Meldedatum]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Meldedatum</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IdLandkreis</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IdLandkreis]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>IdLandkreis</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Datenstand</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Datenstand]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>Datenstand</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NeuerFall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NeuerFall]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>NeuerFall</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NeuerTodesfall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NeuerTodesfall]</local-name>
+            <parent-name>[covid-19_germany_timeline.csv]</parent-name>
+            <remote-alias>NeuerTodesfall</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Anzahl Fall' datatype='integer' name='[AnzahlFall]' role='measure' type='quantitative' />
+      <column caption='Anzahl Todesfall' datatype='integer' name='[AnzahlTodesfall]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Bundesland]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Id Bundesland' datatype='integer' name='[IdBundesland]' role='dimension' type='ordinal' />
+      <column caption='Id Landkreis' datatype='integer' name='[IdLandkreis]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Landkreis]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+        <semantic-values semantic-role='[County].[Name]'>
+          <semantic-value key='&quot;LK Altenkirchen&quot;' value='&quot;LK Altenkirchen (Westerwald)&quot;' />
+        </semantic-values>
+      </column>
+      <column caption='Neuer Fall' datatype='integer' name='[NeuerFall]' role='measure' type='quantitative' />
+      <column caption='Neuer Todesfall' datatype='integer' name='[NeuerTodesfall]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Object Id' datatype='integer' name='[ObjectId]' role='dimension' type='ordinal' />
+      <column-instance column='[AnzahlFall]' derivation='Sum' name='[sum:AnzahlFall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[AnzahlTodesfall]' derivation='Sum' name='[sum:AnzahlTodesfall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NeuerFall]' derivation='Sum' name='[sum:NeuerFall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NeuerTodesfall]' derivation='Sum' name='[sum:NeuerTodesfall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Bundesland, Landkreis'>
+          <field>[Bundesland]</field>
+          <field>[Landkreis]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='de_DE' class='hyper' dbname='C:/Users/Marc/PycharmProjects/COVID-19/Tableau/Extracts/covid-19_germany.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='03/31/2020 03:09:02 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='covid-19_germany' increment-value='%null%' refresh-type='create' rows-inserted='25776' timestamp-start='2020-03-31 15:09:02.557' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>IdBundesland</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[IdBundesland]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IdBundesland</remote-alias>
+              <ordinal>0</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bundesland</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Bundesland]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bundesland</remote-alias>
+              <ordinal>1</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Landkreis</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Landkreis]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Landkreis</remote-alias>
+              <ordinal>2</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>688</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Altersgruppe</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Altersgruppe]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Altersgruppe</remote-alias>
+              <ordinal>3</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Geschlecht</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Geschlecht]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Geschlecht</remote-alias>
+              <ordinal>4</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LDE_RDE' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AnzahlFall</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AnzahlFall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AnzahlFall</remote-alias>
+              <ordinal>5</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AnzahlTodesfall</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AnzahlTodesfall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AnzahlTodesfall</remote-alias>
+              <ordinal>6</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ObjectId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ObjectId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ObjectId</remote-alias>
+              <ordinal>7</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25776</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Meldedatum</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Meldedatum]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Meldedatum</remote-alias>
+              <ordinal>8</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>IdLandkreis</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[IdLandkreis]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>IdLandkreis</remote-alias>
+              <ordinal>9</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>688</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Datenstand</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Datenstand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Datenstand</remote-alias>
+              <ordinal>10</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NeuerFall</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NeuerFall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NeuerFall</remote-alias>
+              <ordinal>11</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NeuerTodesfall</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[NeuerTodesfall]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NeuerTodesfall</remote-alias>
+              <ordinal>12</ordinal>
+              <family>covid-19_germany_timeline.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.555366' measure-ordering='alphabetic' measure-percentage='0.444634' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlFall:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:NeuerFall:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:NeuerTodesfall:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlTodesfall:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Gemeldete Fälle'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid-19_germany' name='federated.0xfuclu0ke0z4o16bll9d178jnrp' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0xfuclu0ke0z4o16bll9d178jnrp'>
+            <column caption='Anzahl Fall' datatype='integer' name='[AnzahlFall]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bundesland]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Landkreis]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[County].[Name]'>
+                <semantic-value key='&quot;LK Altenkirchen&quot;' value='&quot;LK Altenkirchen (Westerwald)&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='date' name='[Meldedatum]' role='dimension' type='ordinal' />
+            <column-instance column='[Bundesland]' derivation='None' name='[none:Bundesland:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Landkreis]' derivation='None' name='[none:Landkreis:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Meldedatum]' derivation='None' name='[none:Meldedatum:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AnzahlFall]' derivation='Sum' name='[sum:AnzahlFall:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Bundesland:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:Landkreis:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]</column>
+            <column>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlFall:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]' value='28' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlFall:qk]</rows>
+        <cols>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]</cols>
+      </table>
+      <simple-id uuid='{1CBB23BB-F3A5-414F-A7F8-4AAF81530C17}' />
+    </worksheet>
+    <worksheet name='Gemeldete Todesfälle'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid-19_germany' name='federated.0xfuclu0ke0z4o16bll9d178jnrp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xfuclu0ke0z4o16bll9d178jnrp'>
+            <column caption='Anzahl Todesfall' datatype='integer' name='[AnzahlTodesfall]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Bundesland]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Landkreis]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[County].[Name]'>
+                <semantic-value key='&quot;LK Altenkirchen&quot;' value='&quot;LK Altenkirchen (Westerwald)&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='date' name='[Meldedatum]' role='dimension' type='ordinal' />
+            <column-instance column='[Bundesland]' derivation='None' name='[none:Bundesland:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Landkreis]' derivation='None' name='[none:Landkreis:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Meldedatum]' derivation='None' name='[none:Meldedatum:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AnzahlTodesfall]' derivation='Sum' name='[sum:AnzahlTodesfall:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Bundesland:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:Landkreis:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]</column>
+            <column>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlTodesfall:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]' scope='cols' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlTodesfall:qk]</rows>
+        <cols>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]</cols>
+      </table>
+      <simple-id uuid='{1D9C5835-3505-4261-92D7-99CBE91769EF}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='COVID-19-Germany-Barchart'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='covid-19_germany' name='federated.0xfuclu0ke0z4o16bll9d178jnrp' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0xfuclu0ke0z4o16bll9d178jnrp'>
+        <column datatype='string' name='[Bundesland]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column datatype='string' name='[Landkreis]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+          <semantic-values semantic-role='[County].[Name]'>
+            <semantic-value key='&quot;LK Altenkirchen&quot;' value='&quot;LK Altenkirchen (Westerwald)&quot;' />
+          </semantic-values>
+        </column>
+        <column-instance column='[Bundesland]' derivation='None' name='[none:Bundesland:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Landkreis]' derivation='None' name='[none:Landkreis:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='8750' id='9' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' type='filter' values='cascading' w='48900' x='50300' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='8750' id='8' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' type='filter' values='cascading' w='49500' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='89250' id='12' param='vert' type='layout-flow' w='98400' x='800' y='9750'>
+            <zone h='44625' id='3' name='Gemeldete Fälle' w='98400' x='800' y='9750'>
+              <layout-cache minheight='173' minwidth='136' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='44625' id='11' name='Gemeldete Todesfälle' w='98400' x='800' y='54375'>
+              <layout-cache minheight='173' minwidth='130' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Desktop'>
+          <zones>
+            <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='9875' id='9' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' type='filter' values='cascading' w='48900' x='50300' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9875' id='8' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' type='filter' values='cascading' w='49500' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='88125' id='12' param='vert' type='layout-flow' w='98400' x='800' y='10875'>
+                <zone h='44062' id='3' name='Gemeldete Fälle' w='98400' x='800' y='10875'>
+                  <layout-cache minheight='173' minwidth='136' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='44062' id='11' name='Gemeldete Todesfälle' w='98400' x='800' y='54937'>
+                  <layout-cache minheight='173' minwidth='130' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+        <devicelayout name='Tablet'>
+          <size sizing-mode='automatic' />
+        </devicelayout>
+        <devicelayout name='Phone'>
+          <size sizing-mode='automatic' />
+          <zones>
+            <zone h='100000' id='20' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97054' id='19' param='vert' type='layout-flow' w='95734' x='2133' y='1473'>
+                <zone fixed-size='38' h='8471' id='9' is-fixed='true' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' type='filter' values='cascading' w='95734' x='2133' y='1473'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='47' h='10129' id='8' is-fixed='true' mode='checkdropdown' name='Gemeldete Fälle' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' type='filter' values='cascading' w='95734' x='2133' y='9944'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='205' h='39226' id='3' is-fixed='true' name='Gemeldete Fälle' w='95734' x='2133' y='20073'>
+                  <layout-cache minheight='173' minwidth='136' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39228' id='11' is-fixed='true' name='Gemeldete Todesfälle' w='95734' x='2133' y='59299'>
+                  <layout-cache minheight='173' minwidth='130' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F80584AD-2BAF-4B29-B209-71998636AD8C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='COVID-19-Germany-Barchart'>
+      <viewpoints>
+        <viewpoint name='Gemeldete Fälle'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gemeldete Todesfälle'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B576273E-776E-47D6-A1DC-69FEB12D3E66}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Gemeldete Fälle'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card mode='checkdropdown' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' type='filter' values='cascading' />
+            <card mode='checkdropdown' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[:Measure Names]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:AnzahlFall:qk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:nk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[sum:AnzahlFall:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{E8A0E360-D10D-49F1-84C1-E535DD6F121E}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Gemeldete Todesfälle'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card mode='checkdropdown' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]' type='filter' values='cascading' />
+            <card mode='checkdropdown' param='[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Bundesland:nk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Landkreis:nk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[none:Meldedatum:qk]</field>
+            <field>[federated.0xfuclu0ke0z4o16bll9d178jnrp].[yr:Meldedatum:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{490B9193-4F94-48F2-B229-60E6C80F4EDA}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='COVID-19-Germany-Barchart' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
