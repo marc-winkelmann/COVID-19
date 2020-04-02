@@ -8,7 +8,7 @@
     <WindowsPersistSimpleIdentifiers />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='COVID-19Barchart_15855153067270' path='/workbooks' revision='1.4' />
+  <repository-location id='COVID-19Barchart_15855153067270' path='/workbooks' revision='2.1' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -23,14 +23,18 @@
   <datasources>
     <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
       <aliases enabled='yes' />
-      <column caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Confirmed&quot;'>
-        <calculation class='tableau' formula='&quot;Confirmed&quot;' />
+      <column alias='Recover Rate (%)' caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Recover Rate&quot;'>
+        <calculation class='tableau' formula='&quot;Recover Rate&quot;' />
+        <aliases>
+          <alias key='&quot;Death Rate&quot;' value='Death Rate (%)' />
+          <alias key='&quot;Recover Rate&quot;' value='Recover Rate (%)' />
+        </aliases>
         <members>
           <member value='&quot;Confirmed&quot;' />
           <member value='&quot;Deaths&quot;' />
           <member value='&quot;Recovered&quot;' />
-          <member value='&quot;Death Rate&quot;' />
-          <member value='&quot;Recover Rate&quot;' />
+          <member alias='Death Rate (%)' value='&quot;Death Rate&quot;' />
+          <member alias='Recover Rate (%)' value='&quot;Recover Rate&quot;' />
         </members>
       </column>
     </datasource>
@@ -137,11 +141,11 @@
       <column caption='Choose Filter' datatype='real' datatype-customized='true' name='[Calculation_765049020942901249]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&quot;Confirmed&quot; &#13;&#10;    THEN [confirmed]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Deaths&quot;&#13;&#10;    THEN [deaths]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Recovered&quot;&#13;&#10;    THEN [recovered]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Death Rate&quot;&#13;&#10;    THEN [Calculation_765049020958683141]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Recover Rate&quot;&#13;&#10;    THEN [Calculation_765049020959617030]&#13;&#10;&#13;&#10;END' />
       </column>
-      <column caption='Death Rate' datatype='real' datatype-customized='true' default-format='p0%' name='[Calculation_765049020958683141]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[deaths]/[confirmed]' />
+      <column caption='Death Rate' datatype='real' datatype-customized='true' default-format='n#,##0.00&quot; %&quot;;-#,##0.00&quot; %&quot;' name='[Calculation_765049020958683141]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[deaths]/[confirmed]*100' />
       </column>
-      <column caption='Recover Rate' datatype='real' datatype-customized='true' default-format='p0%' name='[Calculation_765049020959617030]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[recovered]/[confirmed]' />
+      <column caption='Recover Rate' datatype='real' datatype-customized='true' default-format='n#,##0.00&quot; %&quot;;-#,##0.00&quot; %&quot;' name='[Calculation_765049020959617030]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[recovered]/[confirmed]*100' />
       </column>
       <column caption='Rank' datatype='integer' name='[Calculation_801077818265313280]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='RANK_UNIQUE(sum([Calculation_765049020942901249]))'>
@@ -162,10 +166,10 @@
       <column caption='Recovered' datatype='integer' name='[recovered]' role='measure' type='quantitative' />
       <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
       <extract count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='de_DE' class='hyper' dbname='C:/Users/Marc/PycharmProjects/COVID-19/Tableau/Extracts/covid-19.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/01/2020 04:18:14 PM' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='de_DE' class='hyper' dbname='C:/Users/Marc/PycharmProjects/COVID-19/Tableau/Extracts/covid-19.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/02/2020 07:44:21 AM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <refresh increment-key='' incremental-updates='false'>
-            <refresh-event add-from-file-path='covid-19' increment-value='%null%' refresh-type='create' rows-inserted='12600' timestamp-start='2020-04-01 16:18:14.290' />
+            <refresh-event add-from-file-path='covid-19' increment-value='%null%' refresh-type='create' rows-inserted='12780' timestamp-start='2020-04-02 07:44:21.667' />
           </refresh>
           <metadata-records>
             <metadata-record class='column'>
@@ -178,7 +182,7 @@
               <family>covid-19.csv</family>
               <local-type>string</local-type>
               <aggregation>Count</aggregation>
-              <approx-count>196</approx-count>
+              <approx-count>182</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LDE_RDE' />
             </metadata-record>
@@ -192,7 +196,7 @@
               <family>covid-19.csv</family>
               <local-type>date</local-type>
               <aggregation>Year</aggregation>
-              <approx-count>70</approx-count>
+              <approx-count>71</approx-count>
               <contains-null>true</contains-null>
             </metadata-record>
             <metadata-record class='column'>
@@ -205,7 +209,7 @@
               <family>covid-19.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>657</approx-count>
+              <approx-count>728</approx-count>
               <contains-null>true</contains-null>
             </metadata-record>
             <metadata-record class='column'>
@@ -218,7 +222,7 @@
               <family>covid-19.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>157</approx-count>
+              <approx-count>240</approx-count>
               <contains-null>true</contains-null>
             </metadata-record>
             <metadata-record class='column'>
@@ -231,13 +235,13 @@
               <family>covid-19.csv</family>
               <local-type>integer</local-type>
               <aggregation>Sum</aggregation>
-              <approx-count>215</approx-count>
+              <approx-count>308</approx-count>
               <contains-null>true</contains-null>
             </metadata-record>
           </metadata-records>
         </connection>
       </extract>
-      <layout dim-ordering='alphabetic' dim-percentage='0.278338' measure-ordering='alphabetic' measure-percentage='0.496222' parameter-percentage='0.225441' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.279009' measure-ordering='alphabetic' measure-percentage='0.496741' parameter-percentage='0.22425' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[none:country:nk]' palette='cyclic_10_0' type='palette'>
@@ -777,8 +781,12 @@
       </semantic-values>
       <date-options start-of-week='monday' />
       <datasource-dependencies datasource='Parameters'>
-        <column caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Confirmed&quot;'>
-          <calculation class='tableau' formula='&quot;Confirmed&quot;' />
+        <column alias='Recover Rate (%)' caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Recover Rate&quot;'>
+          <calculation class='tableau' formula='&quot;Recover Rate&quot;' />
+          <aliases>
+            <alias key='&quot;Death Rate&quot;' value='Death Rate (%)' />
+            <alias key='&quot;Recover Rate&quot;' value='Recover Rate (%)' />
+          </aliases>
         </column>
       </datasource-dependencies>
     </datasource>
@@ -801,19 +809,23 @@
             <datasource caption='Parameter' name='Parameters' />
           </datasources>
           <datasource-dependencies datasource='Parameters'>
-            <column caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Confirmed&quot;'>
-              <calculation class='tableau' formula='&quot;Confirmed&quot;' />
+            <column alias='Recover Rate (%)' caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Recover Rate&quot;'>
+              <calculation class='tableau' formula='&quot;Recover Rate&quot;' />
+              <aliases>
+                <alias key='&quot;Death Rate&quot;' value='Death Rate (%)' />
+                <alias key='&quot;Recover Rate&quot;' value='Recover Rate (%)' />
+              </aliases>
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.10tyw0x0nugeef10orus50ovm63m'>
             <column caption='Choose Filter' datatype='real' datatype-customized='true' name='[Calculation_765049020942901249]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&quot;Confirmed&quot; &#13;&#10;    THEN [confirmed]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Deaths&quot;&#13;&#10;    THEN [deaths]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Recovered&quot;&#13;&#10;    THEN [recovered]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Death Rate&quot;&#13;&#10;    THEN [Calculation_765049020958683141]&#13;&#10;ELSEIF [Parameters].[Parameter 1]=&quot;Recover Rate&quot;&#13;&#10;    THEN [Calculation_765049020959617030]&#13;&#10;&#13;&#10;END' />
             </column>
-            <column caption='Death Rate' datatype='real' datatype-customized='true' default-format='p0%' name='[Calculation_765049020958683141]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[deaths]/[confirmed]' />
+            <column caption='Death Rate' datatype='real' datatype-customized='true' default-format='n#,##0.00&quot; %&quot;;-#,##0.00&quot; %&quot;' name='[Calculation_765049020958683141]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[deaths]/[confirmed]*100' />
             </column>
-            <column caption='Recover Rate' datatype='real' datatype-customized='true' default-format='p0%' name='[Calculation_765049020959617030]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[recovered]/[confirmed]' />
+            <column caption='Recover Rate' datatype='real' datatype-customized='true' default-format='n#,##0.00&quot; %&quot;;-#,##0.00&quot; %&quot;' name='[Calculation_765049020959617030]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[recovered]/[confirmed]*100' />
             </column>
             <column caption='Rank' datatype='integer' name='[Calculation_801077818265313280]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='RANK_UNIQUE(sum([Calculation_765049020942901249]))'>
@@ -834,6 +846,7 @@
             </column>
             <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
             <column caption='Deaths' datatype='integer' name='[deaths]' role='measure' type='quantitative' />
+            <column-instance column='[confirmed]' derivation='None' name='[none:confirmed:qk]' pivot='key' type='quantitative' />
             <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
             <column-instance column='[date]' derivation='None' name='[none:date:ok]' pivot='key' type='ordinal' />
             <column caption='Recovered' datatype='integer' name='[recovered]' role='measure' type='quantitative' />
@@ -842,7 +855,10 @@
             </column-instance>
           </datasource-dependencies>
           <filter class='quantitative' column='[federated.10tyw0x0nugeef10orus50ovm63m].[attr:Calculation_765049020942901249:qk]' included-values='in-range'>
-            <min>9.9999999999999995e-08</min>
+            <min>1.0</min>
+          </filter>
+          <filter class='quantitative' column='[federated.10tyw0x0nugeef10orus50ovm63m].[none:confirmed:qk]' included-values='in-range'>
+            <min>2</min>
           </filter>
           <filter class='categorical' column='[federated.10tyw0x0nugeef10orus50ovm63m].[usr:Calculation_801077818265313280:ok:2]'>
             <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
@@ -861,6 +877,7 @@
           <slices>
             <column>[federated.10tyw0x0nugeef10orus50ovm63m].[attr:Calculation_765049020942901249:qk]</column>
             <column>[federated.10tyw0x0nugeef10orus50ovm63m].[usr:Calculation_801077818265313280:ok:2]</column>
+            <column>[federated.10tyw0x0nugeef10orus50ovm63m].[none:confirmed:qk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -957,14 +974,18 @@
         <datasource caption='Parameter' name='Parameters' />
       </datasources>
       <datasource-dependencies datasource='Parameters'>
-        <column caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Confirmed&quot;'>
-          <calculation class='tableau' formula='&quot;Confirmed&quot;' />
+        <column alias='Recover Rate (%)' caption='Measure' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Recover Rate&quot;'>
+          <calculation class='tableau' formula='&quot;Recover Rate&quot;' />
+          <aliases>
+            <alias key='&quot;Death Rate&quot;' value='Death Rate (%)' />
+            <alias key='&quot;Recover Rate&quot;' value='Recover Rate (%)' />
+          </aliases>
           <members>
             <member value='&quot;Confirmed&quot;' />
             <member value='&quot;Deaths&quot;' />
             <member value='&quot;Recovered&quot;' />
-            <member value='&quot;Death Rate&quot;' />
-            <member value='&quot;Recover Rate&quot;' />
+            <member alias='Death Rate (%)' value='&quot;Death Rate&quot;' />
+            <member alias='Recover Rate (%)' value='&quot;Recover Rate&quot;' />
           </members>
         </column>
       </datasource-dependencies>
@@ -1128,7 +1149,7 @@
         <viewpoint name='COVID-19_barchart'>
           <current-page>
             <multibucket>
-              <bucket>#2020-01-22#</bucket>
+              <bucket>#2020-02-10#</bucket>
             </multibucket>
           </current-page>
           <zoom type='entire-view' />
@@ -1170,12 +1191,13 @@
       <viewpoint>
         <current-page>
           <multibucket>
-            <bucket>#2020-01-22#</bucket>
+            <bucket>#2020-02-10#</bucket>
           </multibucket>
         </current-page>
         <highlight>
           <color-one-way>
             <field>[federated.10tyw0x0nugeef10orus50ovm63m].[none:Calculation_765049020942901249:ok]</field>
+            <field>[federated.10tyw0x0nugeef10orus50ovm63m].[none:confirmed:qk]</field>
             <field>[federated.10tyw0x0nugeef10orus50ovm63m].[none:country:nk]</field>
             <field>[federated.10tyw0x0nugeef10orus50ovm63m].[usr:Calculation_801077818265313280:ok:2]</field>
             <field>[federated.10tyw0x0nugeef10orus50ovm63m].[usr:Calculation_801077818265313280:ok]</field>
@@ -1189,66 +1211,109 @@
   <thumbnails>
     <thumbnail height='192' name='COVID-19_Dashboard_barchart' width='192'>
       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
-      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
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
