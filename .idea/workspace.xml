@@ -162,7 +162,9 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -213,14 +215,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588458095905" />
-    <state x="173" y="107" key="MergeDialog" timestamp="1588528837749">
+    <state x="173" y="107" key="MergeDialog" timestamp="1588531042014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="173" y="107" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588528837749" />
-    <state x="479" y="256" width="940" height="570" key="MultipleFileMergeDialog" timestamp="1588528968703">
+    <state x="173" y="107" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588531042014" />
+    <state x="479" y="256" width="940" height="570" key="MultipleFileMergeDialog" timestamp="1588531084349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="479" y="256" width="940" height="570" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588528968703" />
+    <state x="479" y="256" width="940" height="570" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588531084349" />
     <state x="755" y="231" key="RollbackChangesDialog" timestamp="1588528218190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -249,10 +251,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="684" y="226" width="631" height="574" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588529943660" />
-    <state x="747" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1588529784459">
+    <state x="747" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1588530951559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="747" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588529784459" />
+    <state x="747" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588530951559" />
     <state x="676" y="311" key="git4idea.merge.GitPullDialog" timestamp="1588528906518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
