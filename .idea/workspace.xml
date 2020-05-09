@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9c2e39e-fc16-48f9-88e9-9ccbe1f26af9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/getCOVID-19_gsheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/getCOVID-19_gsheets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tableau/Public/COVID-19 Map.twbx" beforeDir="false" afterPath="$PROJECT_DIR$/Tableau/Public/COVID-19 Map.twbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/getCOVID-19_german_gsheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/getCOVID-19_german_gsheets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,6 +87,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="getCOVID-19_german_gsheets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COVID-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/getCOVID-19_german_gsheets.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="getCOVID-19_gsheets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COVID-19" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +133,9 @@
       <list>
         <item itemvalue="Python.getCOVID-19_gsheets" />
         <item itemvalue="Python.getCOVID-19" />
+        <item itemvalue="Python.getCOVID-19_german_gsheets" />
+        <item itemvalue="Python.getCOVID-19_gsheets" />
+        <item itemvalue="Python.getCOVID-19" />
       </list>
     </recent_temporary>
   </component>
@@ -134,12 +157,12 @@
       <option name="project" value="LOCAL" />
       <updated>1588528159618</updated>
     </task>
-    <task id="LOCAL-00002" summary=".idea update">
-      <created>1588533512453</created>
+    <task id="LOCAL-00002" summary="python to google sheets (data for germany)">
+      <created>1589015063900</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1588533512453</updated>
+      <updated>1589015063900</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -185,18 +208,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="python to google sheets" />
-    <MESSAGE value=".idea update" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea update" />
+    <MESSAGE value="python to google sheets (data for germany)" />
+    <option name="LAST_COMMIT_MESSAGE" value="python to google sheets (data for germany)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Notifications" timestamp="1588684696676">
+    <state x="552" y="178" key="#Notifications" timestamp="1588529390143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588684696676" />
-    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1588533511462">
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588529390143" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1589015060055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588533511462" />
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589015060055" />
     <state x="86" y="34" width="1736" height="856" key="DiffContextDialog" timestamp="1588529941744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -209,26 +232,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="782" y="436" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588525963662" />
-    <state x="744" y="387" key="Github.CreatePullRequestDialog" timestamp="1588535204734">
+    <state x="744" y="387" key="Github.CreatePullRequestDialog" timestamp="1589015331334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="744" y="387" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588535204734" />
-    <state width="949" height="298" key="GridCell.Tab.0.bottom" timestamp="1588779934349">
+    <state x="744" y="387" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015331334" />
+    <state width="1899" height="202" key="GridCell.Tab.0.bottom" timestamp="1589015385544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="298" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588779934349" />
-    <state width="949" height="298" key="GridCell.Tab.0.center" timestamp="1588779934349">
+    <state width="1899" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589015385544" />
+    <state width="1899" height="202" key="GridCell.Tab.0.center" timestamp="1589015385544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="298" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588779934349" />
-    <state width="949" height="298" key="GridCell.Tab.0.left" timestamp="1588779934349">
+    <state width="1899" height="202" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589015385544" />
+    <state width="1899" height="202" key="GridCell.Tab.0.left" timestamp="1589015385544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="298" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588779934349" />
-    <state width="949" height="298" key="GridCell.Tab.0.right" timestamp="1588779934349">
+    <state width="1899" height="202" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589015385544" />
+    <state width="1899" height="202" key="GridCell.Tab.0.right" timestamp="1589015385544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="298" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588779934349" />
+    <state width="1899" height="202" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589015385544" />
     <state x="173" y="107" key="MergeDialog" timestamp="1588531042014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,38 +268,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="310" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588527175093" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588533542644">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589015080404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588533542644" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589015080404" />
     <state x="733" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1588527917304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588527917304" />
-    <state x="171" y="93" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1588535195439">
+    <state x="171" y="93" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1589015199959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="171" y="93" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588535195439" />
-    <state x="505" y="409" key="com.intellij.ide.util.TipDialog" timestamp="1588884426074">
+    <state x="171" y="93" width="1736" height="856" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015199959" />
+    <state x="505" y="409" key="com.intellij.ide.util.TipDialog" timestamp="1589012206780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="505" y="409" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588884426074" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588627268495">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588627268495" />
+    <state x="505" y="409" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589012206780" />
     <state x="684" y="226" width="631" height="574" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588529943660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="684" y="226" width="631" height="574" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588529943660" />
-    <state x="747" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1588530951559">
+    <state x="747" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1589015280084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="747" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588530951559" />
-    <state x="676" y="311" key="git4idea.merge.GitPullDialog" timestamp="1588528906518">
+    <state x="747" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015280084" />
+    <state x="676" y="311" key="git4idea.merge.GitPullDialog" timestamp="1589015133459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="676" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588528906518" />
+    <state x="676" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015133459" />
     <state x="835" y="368" key="git4idea.ui.GitStashDialog" timestamp="1588528042068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
