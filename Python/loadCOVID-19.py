@@ -25,8 +25,8 @@ wks_control = 'control'
 
 # load COVID-19 data (Johns Hopkins University) to GSheets
 try:
-    #exec(open("/home/ubuntu/pythonProjects/COVID-19/getCOVID-19_gsheets.py").read(), globals())
-    exec(open("getCOVID-19_gsheets.py").read(), globals())
+    exec(open("/home/ubuntu/pythonProjects/COVID-19/getCOVID-19_gsheets.py").read(), globals())
+    #exec(open("getCOVID-19_gsheets.py").read(), globals())
 except:
     loadCovid19 = pd.DataFrame(
         {"job_name": ["getCOVID-19_gsheets.py"],
@@ -44,8 +44,8 @@ else:
 
 # load COVID-19 data (Robert Koch Institut) to GSheets
 try:
-    #exec(open("/home/ubuntu/pythonProjects/COVID-19/getCOVID-19_germany_gsheets.py").read(), globals())
-    exec(open("getCOVID-19_german_gsheets.py").read(), globals())
+    exec(open("/home/ubuntu/pythonProjects/COVID-19/getCOVID-19_germany_gsheets.py").read(), globals())
+    #exec(open("getCOVID-19_german_gsheets.py").read(), globals())
 except:
     loadCovid19_germany = pd.DataFrame(
         {"job_name": ["getCOVID-19_germany_gsheets.py"],
