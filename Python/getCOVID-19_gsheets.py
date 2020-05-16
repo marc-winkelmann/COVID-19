@@ -28,6 +28,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 
 # get credentials
 credentials = ServiceAccountCredentials.from_json_keyfile_name('/home/ubuntu/pythonProjects/COVID-19/Python/covid-19_gsheetsAccess.json', scope)
+#credentials = ServiceAccountCredentials.from_json_keyfile_name('covid-19_gsheetsAccess.json', scope)
 
 # authorize with credentials
 gc = gspread.authorize(credentials)
