@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9c2e39e-fc16-48f9-88e9-9ccbe1f26af9" name="Default Changelist" comment="" />
+    <list default="true" id="e9c2e39e-fc16-48f9-88e9-9ccbe1f26af9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Python/cron.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/execution.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/getCOVID-19_german_gsheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/getCOVID-19_german_gsheets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/getCOVID-19_gsheets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/getCOVID-19_gsheets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/loadCOVID-19.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/loadCOVID-19.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +44,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,7 +69,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../football" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Python.loadCOVID-19">
+  <component name="RunManager" selected="Python.getCOVID-19_german_gsheets">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="COVID-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="getCOVID-19" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COVID-19" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,10 +175,53 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="COVID-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="COVID-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="COVID-19" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.loadCOVID-19" />
         <item itemvalue="Python.getCOVID-19_german_gsheets" />
+        <item itemvalue="Python.loadCOVID-19" />
         <item itemvalue="Python.getCOVID-19_gsheets" />
         <item itemvalue="Python.getCOVID-19" />
         <item itemvalue="Python.getCOVID-19_gsheets" />
@@ -196,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589620334930</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed loadCOVID-19.py">
+      <created>1589620520254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589620520254</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,22 +348,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="387" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589620384741" />
-    <state width="1899" height="202" key="GridCell.Tab.0.bottom" timestamp="1589619541325">
+    <state width="1899" height="202" key="GridCell.Tab.0.bottom" timestamp="1589630779198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589619541325" />
-    <state width="1899" height="202" key="GridCell.Tab.0.center" timestamp="1589619541325">
+    <state width="1899" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589630779198" />
+    <state width="1899" height="202" key="GridCell.Tab.0.center" timestamp="1589630779198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="202" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589619541325" />
-    <state width="1899" height="202" key="GridCell.Tab.0.left" timestamp="1589619541325">
+    <state width="1899" height="202" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589630779198" />
+    <state width="1899" height="202" key="GridCell.Tab.0.left" timestamp="1589630779198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="202" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589619541325" />
-    <state width="1899" height="202" key="GridCell.Tab.0.right" timestamp="1589619541325">
+    <state width="1899" height="202" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589630779198" />
+    <state width="1899" height="202" key="GridCell.Tab.0.right" timestamp="1589630779198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="202" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589619541325" />
+    <state width="1899" height="202" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589630779198" />
     <state x="173" y="107" key="MergeDialog" timestamp="1588531042014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -326,10 +404,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015280084" />
-    <state x="676" y="311" key="git4idea.merge.GitPullDialog" timestamp="1589620295237">
+    <state x="676" y="311" key="git4idea.merge.GitPullDialog" timestamp="1589620628438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="676" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589620295237" />
+    <state x="676" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589620628438" />
     <state x="835" y="368" key="git4idea.ui.GitStashDialog" timestamp="1588528042068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

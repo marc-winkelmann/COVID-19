@@ -1,7 +1,6 @@
 import requests
 import json
 import pandas as pd
-import gspread
 from df2gspread import df2gspread as d2g
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -29,9 +28,6 @@ scope = ['https://spreadsheets.google.com/feeds',
 # get credentials
 credentials = ServiceAccountCredentials.from_json_keyfile_name('/home/ubuntu/pythonProjects/COVID-19/Python/covid-19_gsheetsAccess.json', scope)
 #credentials = ServiceAccountCredentials.from_json_keyfile_name('covid-19_gsheetsAccess.json', scope)
-
-# authorize with credentials
-gc = gspread.authorize(credentials)
 
 # get the google spreadsheet ID and worksheet name
 spreadsheet_key = '1xTcBbUqPgOnOM5brZtvbGxWuxM2AU16CFBbPWOoR08c'
