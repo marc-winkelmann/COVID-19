@@ -19,4 +19,4 @@ for c in response.keys():
 
 df = pd.DataFrame(row, columns=['country','date','confirmed','deaths','recovered'])
 
-df.to_csv('C:/Users/Marc/PycharmProjects/COVID-19/Data/covid-19.csv', sep=';', encoding='utf-8', index=False)
+df.to_csv('C:/Users/marcf/Documents/COVID-19/Data/covid-19.csv', sep=';', encoding='utf-8', index=False)
